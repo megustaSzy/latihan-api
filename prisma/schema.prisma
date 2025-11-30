@@ -22,3 +22,17 @@ model tb_barang {
   harga Int
   satuan Satuan 
 }
+
+model tb_user {
+  id           Int           @id @default(autoincrement())
+  name         String        @db.VarChar(50)
+  email        String        @unique
+  password     String        @db.VarChar(25)
+  notelp       String        @default("081234567890") @db.VarChar(15)
+  role         Role          @default(USER)
+}
+
+enum Role {
+  USER
+  ADMIN
+}
