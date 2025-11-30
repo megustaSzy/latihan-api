@@ -1,9 +1,8 @@
-// buat fungsi GET (ambil data)
-import { PrismaClient } from "@/generated/prisma";
+import prisma from "@/app/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 
 // buat variabel prisma (Prism Client)
-const prisma = new PrismaClient()
+
 
 // export async function GET() {
 //   // gaya express  return new Response("Test")

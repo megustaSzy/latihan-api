@@ -1,8 +1,7 @@
 //buat variable prisma
-import { PrismaClient } from "@/generated/prisma"
+import prisma from "@/app/lib/prisma";
 import { NextRequest, NextResponse } from "next/server"
 
-const prisma = new PrismaClient()
 //buat service DELETE (hapus data)
 export const DELETE =async(request: NextRequest,
     { params }: { params: { slug: string } }) => {

@@ -1,7 +1,5 @@
-import { PrismaClient } from "@/generated/prisma";
+import prisma from "@/app/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
-
-const prisma = new PrismaClient()
 
 // buat GET user
 export const GET = async () => {
